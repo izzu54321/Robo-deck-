@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bot Deck — Robot Performance Stage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hud">
+  <div class="hud-brand">
+    <span class="hud-dot"></span>
+    <span class="hud-title">BOT&nbsp;DECK</span>
+  </div>
+  <div class="hud-stats">
+    <div class="stat">
+      <span class="stat-label">MOVEMENT</span>
+      <span class="stat-value" id="moveCount">000</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">LIVE ACT</span>
+      <span class="stat-value" id="actName">—</span>
+    </div>
+  </div>
+</div>
+
+<main class="stage-wrap">
+  <div class="stage" id="stage">
+    <div class="stage-floor"></div>
+    <div class="stage-grid"></div>
+    <!-- robots + props injected here by JS -->
+  </div>
+</main>
+
+<section class="deck">
+  <p class="deck-hint">Dial ghumao, scene badlo — spin a dial to change the show</p>
+  <div class="dials" id="dials"></div>
+</section>
+
+<section class="genpanel">
+  <div class="genpanel-head">
+    <h2>Nature Image Generator</h2>
+    <p>Sirf nature scenes — koi insaan, jaanwar ya chehra nahi. Free, no API key (Pollinations.ai).</p>
+  </div>
+  <div class="genpanel-controls">
+    <input id="genPrompt" type="text" placeholder="jaise: misty pine forest at sunrise, golden hour" maxlength="140">
+    <button id="genBtn">Generate</button>
+  </div>
+  <p class="genpanel-warn" id="genWarn"></p>
+  <div class="genpanel-gallery" id="genGallery"></div>
+</section>
+
+<footer class="credit">
+  7 bots · infinite combinations · built to deploy on GitHub + Vercel
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
